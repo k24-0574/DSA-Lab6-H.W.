@@ -43,12 +43,12 @@ int precedence(char op) {
     return 0;
 }
 
-string infixToPostfix(const string &expr){
+string infixToPostfix(string eq){
     Stack opStack; //stores operations
     string postfix = "";
 
-    for (int i = 0; i < expr.size(); i++){
-        char c = expr[i];
+    for (int i = 0; i < eq.size(); i++){
+        char c = eq[i];
         if (isdigit(c) || c =='.'||c ==' '){
             postfix += c;}  
         else if (c =='('){
